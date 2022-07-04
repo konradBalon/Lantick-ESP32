@@ -25,7 +25,7 @@ class Control_room:
         global button_presses, last_time
         new_time = utime.ticks_ms()
         
-        if (new_time - self.last_time) > 300: 
+        if (new_time - self.last_time) > 1000: 
             self.button_presses +=1
             self.last_time = new_time
             print('pin change', p, utime.localtime())
